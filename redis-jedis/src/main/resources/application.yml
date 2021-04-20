@@ -1,0 +1,16 @@
+server:
+  port: 8081
+
+spring:
+  redis:
+    host: ${REDIS_HOST:192.168.96.128}
+    port: ${REDIS_PORT:6379}
+    database: ${REDIS_DATABASE:0}
+    password: ${REDIS_PASSWORD:6993258}
+    timeout: ${REDIS_TIMEOUT:30000}
+    jedis:
+      pool:
+        max-total: ${JEDIS_POOL_MAX-TOTAL:256}
+        max-idle: ${JEDIS_POOL_MAX-IDLE:256}
+        min-idle: ${JEDIS_POOL_MIN-IDLE:20}
+        max-wait: ${JEDIS_POOL_MAX-WAIT:10000}
